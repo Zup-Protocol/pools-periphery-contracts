@@ -1,0 +1,29 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc = "0.8.25"
+evm_version = "prague"
+
+[fuzz]
+runs = 1000
+max_test_rejects = 65536
+dictionary_weight = 40
+include_storage = true
+include_push_bytes = true
+extra_output = ["storageLayout", "metadata"]
+
+[invariant]
+fail_on_revert = false
+runs = 1000
+depth = 25
+
+[fmt]
+bracket_spacing = true
+int_types = "long"
+line_length = 120
+multiline_func_header = "all"
+number_underscore = "thousands"
+quote_style = "double"
+tab_width = 4
+wrap_comments = true
